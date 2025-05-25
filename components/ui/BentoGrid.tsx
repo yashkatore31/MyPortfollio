@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import { MagicButton } from "@/components/ui/MagicButton";
-import { IoCopyOutline } from "react-icons/io5";
+import { IoCopyOutline } from "react-icons/io5"; import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -62,16 +62,19 @@ export const BentoGridItem = ({
     >
       <div className={`${id === 6 && "flex justify-center"} h-full`}></div>
       <div className="h-full w-full absolute">
-        {img && (
-          <img
-            src={img as string}
-            alt=""
-            className={cn(
-              imgClassName,
-              "object-cover object-center rounded-3xl"
-            )}
-          />
-        )}
+      {typeof img === "string" ? (
+  <Image
+    src={img}
+    alt="Bento Image"
+    className={cn(imgClassName, "object-cover object-center rounded-3xl")}
+    fill
+    sizes="(max-width: 768px) 100vw, 50vw"
+    style={{ objectFit: "cover" }}
+  />
+) : (
+  img
+)}
+
       </div>
 
       <div
@@ -80,15 +83,16 @@ export const BentoGridItem = ({
         }`}
       >
         {spareImg && (
-          <img
-            src={spareImg}
-            alt=""
-            className={cn(
-              "object-cover object-center w-full h-full",
-              imgClassName
-            )}
-          />
-        )}
+  <Image
+    src={spareImg}
+    alt="Spare Image"
+    className={cn("object-cover object-center w-full h-full", imgClassName)}
+    fill
+    sizes="(max-width: 768px) 100vw, 50vw"
+    style={{ objectFit: "cover" }}
+  />
+)}
+
       </div>
       {id === 6 && (
         <BackgroundGradientAnimation>

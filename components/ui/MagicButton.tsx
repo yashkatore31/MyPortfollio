@@ -1,8 +1,5 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { useAnimate } from "motion/react";
-import { motion, stagger } from "framer-motion";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export const MagicButton = ({
   title,
@@ -12,7 +9,7 @@ export const MagicButton = ({
   otherClasses,
 }: {
   title: string;
-  position: string;
+  position?: string;
   icon: React.ReactNode;
   HandleClick?: () => void;
   otherClasses?: string;

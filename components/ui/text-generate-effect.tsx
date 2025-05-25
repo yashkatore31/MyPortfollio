@@ -15,7 +15,8 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  const wordsArray = words.split(" ");
+
   useEffect(() => {
     animate(
       "span",
@@ -24,38 +25,32 @@ export const TextGenerateEffect = ({
         filter: filter ? "blur(0px)" : "none",
       },
       {
-        duration: duration ? duration : 1,
+        duration: duration || 1,
         delay: stagger(0.2),
       }
     );
-  }, [scope.current]);
+  }, [animate, duration, filter]);
 
-  const renderWords = () => {
-    return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className={`${idx > 2 ? 'text-purple-400' : 'text-white'} opacity-0`}
-              style={{
-                filter: filter ? "blur(10px)" : "none",
-              }}
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
-      </motion.div>
-    );
-  };
+  const renderWords = () => (
+    <motion.div ref={scope}>
+      {wordsArray.map((word, idx) => (
+        <motion.span
+          key={word + idx}
+          className={`${idx > 2 ? "text-purple-400" : "text-white"} opacity-0`}
+          style={{
+            filter: filter ? "blur(10px)" : "none",
+          }}
+        >
+          {word}{" "}
+        </motion.span>
+      ))}
+    </motion.div>
+  );
 
   return (
     <div className={cn("font-bold", className)}>
       <div className="my-4">
-        <div className="text-white leading-snug tracking-wide">
-          {renderWords()}
-        </div>
+        <div className="text-white leading-snug tracking-wide">{renderWords()}</div>
       </div>
     </div>
   );
