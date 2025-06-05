@@ -80,6 +80,19 @@ export const projects = [
     ],
     link: "https://managementfestsclg.lovestoblog.com/",
   },
+  {
+    id: 2,
+    title: "GhostFeed",
+    des: "Share your thoughts, images, and stories with complete anonymity. Your voice matters, your identity stays hidden..",
+    img: "/GhostFeed.png",
+    iconLists: [
+      "/ts.svg",
+      "/nextjs.svg",
+      "/tail.svg",
+      "/re.svg",
+    ],
+    link: "https://ghostfeed.live",
+  },
 ];
 
 // export const testimonials = [

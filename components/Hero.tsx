@@ -45,7 +45,7 @@ export default function hero() {
   <p className="text-center md:tracking-wider mb-5text-sm md:text-lg lg:text-2xl ">
     Hi , I&apos;m Yash , a FullStack Developer
   </p>
-  <a href="/about">
+  <a href="#about">
   <MagicButton title="show my work" position="right" icon={<FaLocationArrow />}/></a>
 </div>
 </div>
