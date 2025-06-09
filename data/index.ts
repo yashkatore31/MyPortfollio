@@ -93,6 +93,19 @@ export const projects = [
     ],
     link: "https://ghostfeed.live",
   },
+  { id: 3,
+    title: "Idevo-project idea generator",
+    des: "Generate project ideas based on your interests and skills. Perfect for students and developers looking for inspiration.",
+    img: "/idevo.png",
+    iconLists: [
+      "/ts.svg",
+      "/nextjs.svg",
+      "/tail.svg",
+      "/re.svg",
+      "/gemini.svg",
+    ],
+    link: "https://idevo.vercel.app/",
+  },
 ];
 
 // export const testimonials = [
