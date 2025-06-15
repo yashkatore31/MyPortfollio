@@ -68,7 +68,7 @@ export const gridItems = [
 
 export const projects = [
   {
-    id: 1,
+    id: 4,
     title: "Management Fest 2025",
     des: "Explore our exciting events and showcase your talent at B. N. Sardana Arts, Science, and Commerce College, Sangamner.",
     img: "/web.png",
@@ -93,7 +93,7 @@ export const projects = [
     ],
     link: "https://ghostfeed.live",
   },
-  { id: 3,
+  { id: 1,
     title: "Idevo-project idea generator",
     des: "Generate project ideas based on your interests and skills. Perfect for students and developers looking for inspiration.",
     img: "/idevo.png",
@@ -105,6 +105,18 @@ export const projects = [
       "/gemini.svg",
     ],
     link: "https://idevo.vercel.app/",
+  },
+  { id: 3,
+    title: "PGM - Invoice app for merchant",
+    des: " Created a Real World Application Project for managing invoices for merchant.",
+    img: "/pgm.png",
+    iconLists: [
+      "/ts.svg",
+      "/nextjs.svg",
+      "/tail.svg",
+      "/re.svg",
+    ],
+    link: "https://the-pgm.vercel.app/",
   },
 ];
 
